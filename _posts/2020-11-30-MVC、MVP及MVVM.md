@@ -14,7 +14,7 @@
     - View通过观察者模式收到Model变更的消息以后，会向Model请求最新的数据，然后重新更新界面。
 
 2. 把业务逻辑和展示逻辑分离，模块化程度高。但由于View是强依赖特定的Model的，所以View无法组件化，无法复用 
-![MVC](../assets/image/MVC.png)
+![MVC](/assets/image/MVC.png)
 
 ## MVP
 1. "MVP":module view presenter
@@ -22,7 +22,7 @@
 	- Presenter会执行相应的应用程序逻辑，并且对Model进行相应的操作;
 	- 而这时候Model执行完业务逻辑以后,也是通过观察者模式把自己变更的消息传递出去，但是是传给Presenter而不是View。Presenter获取到Model变更的消息以后，通过View提供的接口更新界面。
 	- View不依赖Model, View可以进行组件化。但Model  ->  View的手动同步逻辑比较麻烦，维护困难
-![MVC](../assets/image/MVP.png)
+![MVC](/assets/image/MVP.png)
 
 ## MVVM
 1. "MVVM": module view viewmodule
@@ -32,4 +32,4 @@
 	- 解决了MVP大量的手动View和Model同步的问题，提供双向绑定机制。提高了代码的可维护性。
 	- 对于大型的图形应用程序，视图状态较多。
 	- ViewModel的构建和维护的成本都会比较高。
-![MVC](../assets/image/MVVM.png)
+![MVC](/assets/image/MVVM.png)
